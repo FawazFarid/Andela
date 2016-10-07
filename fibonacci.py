@@ -7,8 +7,3 @@ def fibonacci(n):
 			a = b
 			b = temp + b
 		print a
-
-# Display the first 15 Fibonacci numbers.
-
-
-fibonacci(14);
