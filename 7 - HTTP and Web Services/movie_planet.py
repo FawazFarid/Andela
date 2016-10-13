@@ -3,16 +3,10 @@ import requests
 
 #Prints out the results of the search
 def display(data):
-	results = 'Search Result : \n'
+	results = 'Search Result : \n\n' 
 
 	if(data['Response'] == 'True'):
-		results += 'Title : %s \n' % data['Title']
-		results += 'Year : %s \n' % data['Year']
-		results +=  'Plot \n'
-		results +=  data['Plot'] + '\n'
-		results +=  'Starring \n'
-		results +=  data['Actors'] + '\n'  
-
+		results += 'Title: {}\n\n Year: {}\n\n Plot: {}\n\n Starring: {}\n\n '.format(data['Title'],data['Year'],data['Plot'], data['Actors']) 
 	else:
 		results += data['Error']
 
